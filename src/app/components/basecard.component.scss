@@ -1,0 +1,98 @@
+/* src/app/components/basecard.component.scss */
+.measurement-card {
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__header h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #0041A3;
+  }
+  &__header h3 {
+    margin: 4px 0 0;
+    font-size: 16px;
+    color: #70777B;
+  }
+  &__header p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #70777B;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+      font-size: 14px;
+      color: #0041A3;
+    }
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #A9ADB0;
+    border-radius: 4px;
+    background: #F4F7F9;
+  }
+
+  &__textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  &__checkbox-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h4 {
+      margin: 0;
+      font-size: 14px;
+      color: #0041A3;
+    }
+    .measurement-card__checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #70777B;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn--primary {
+      background: #0041A3;
+      color: white;
+      border: none;
+    }
+    .btn--link {
+      background: transparent;
+      color: #CA4949;
+      border: none;
+      text-decoration: underline;
+    }
+  }
+}

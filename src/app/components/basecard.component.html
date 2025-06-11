@@ -1,0 +1,50 @@
+<!-- src/app/components/basecard.component.html -->
+<div class="measurement-card">
+  <header class="measurement-card__header">
+    <h1>{{ headerTitle }}</h1>
+    <h3>{{ headerSubtitle }}</h3>
+    <p>{{ headerContent }}</p>
+  </header>
+
+  <div class="measurement-card__field">
+    <label>{{ nameLabel }}</label>
+    <input
+      type="text"
+      [placeholder]="namePlaceholder"
+      class="measurement-card__input"
+    />
+  </div>
+
+  <div class="measurement-card__field">
+    <label>{{ descriptionLabel }}</label>
+    <textarea
+      [placeholder]="descriptionPlaceholder"
+      class="measurement-card__textarea"
+    ></textarea>
+  </div>
+
+  <div class="measurement-card__field">
+    <label>{{ stateLabel }}</label>
+    <select class="measurement-card__select">
+      <option
+        *ngFor="let opt of stateOptions"
+        [selected]="opt === selectedState"
+      >
+        {{ opt }}
+      </option>
+    </select>
+  </div>
+
+  <div *ngIf="showCheckbox" class="measurement-card__checkbox-section">
+    <h4>{{ sectionLabel }}</h4>
+    <label class="measurement-card__checkbox">
+      <input type="checkbox" />
+      {{ checkboxLabel }}
+    </label>
+  </div>
+
+  <div class="measurement-card__actions">
+    <button class="btn btn--primary">{{ primaryButtonText }}</button>
+    <button class="btn btn--link">{{ linkButtonText }}</button>
+  </div>
+</div>
